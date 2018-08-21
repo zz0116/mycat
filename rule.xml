@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mycat:rule SYSTEM "rule.dtd">
+<mycat:rule xmlns:mycat="http://io.mycat/">
+	<tableRule name="sharding-by-enum">
+		<rule>
+			<columns>uid</columns>
+			<algorithm>string-enum</algorithm>
+		</rule>
+	</tableRule>
+	<function name="string-enum"
+		class="io.mycat.route.function.PartitionByFileMap">
+		<property name="mapFile">sharding-by-enum.txt</property>
+		<property name="type">1</property>
+	</function>
+</mycat:rule>

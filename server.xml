@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mycat:server SYSTEM "server.dtd">
+<mycat:server xmlns:mycat="http://io.mycat/">
+	<system>
+		<property name="nonePasswordLogin">0</property>
+		<property name="useHandshakeV10">1</property>
+		<property name="useSqlStat">0</property>
+		<property name="useGlobleTableCheck">0</property>
+		<property name="sequnceHandlerType">2</property>
+		<property name="subqueryRelationshipCheck">false</property>
+		<property name="processorBufferPoolType">0</property>
+		<property name="handleDistributedTransactions">0</property>
+		<property name="useOffHeapForMerge">1</property>
+        <property name="memoryPageSize">64k</property>
+		<property name="spillsFileBufferSize">1k</property>
+		<property name="useStreamOutput">0</property>
+		<property name="systemReserveMemorySize">384m</property>
+		<property name="useZKSwitch">false</property>
+	</system>
+	<user name="root" defaultAccount="true">
+		<property name="password">root</property>
+		<property name="schemas">ssmdemo</property>
+	</user>
+</mycat:server>
